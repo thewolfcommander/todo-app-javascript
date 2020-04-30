@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --a: #f46b45;
+    --b: #eea849;
+    --c: #005C97;
+    --d: #363795;
+    --e: #e53935;
+    --f: #e35d5b;
+    --white: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, var(--c), var(--d));
+    color: var(--white);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    background: white;
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.15);
+}
+
+.title h1 {
+    font-size: 44px;
+    color: var(--e);
+    font-weight: 800;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
+}
+
+.title p {
+    font-size: 22px;
+    margin-top: 10px;
+    color: var(--f);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.todo {
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px 0;
+    width: 100%;
+    background: white;
+    overflow-y: scroll;
+    box-shadow: 1px 3px 6px rgba(0,0,0,0.15);
+}
+
+.add {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 0;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+form.addTask {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task {
+    min-width: 150px;
+    padding: 7px 15px;
+    height: 50px;
+    border-radius: 8px 0 0 8px;
+    border: 2px solid var(--a);
+    font-size: 22px;
+}
+
+.submit {
+    min-width: 70px;
+    padding: 7px 15px;
+    height: 50px;
+    cursor: pointer;
+    border: 2px solid var(--a);
+    background: linear-gradient(to right, var(--a), var(--b));
+    color: var(--white);
+    font-size: 22px;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.submit:hover,
+.submit:active {
+    border-left: none;
+    background: var(--white);
+    color: var(--a);
+}
+
+input:focus {
+    outline: none;
+}
+
+.list {
+    border-top: 2px solid var(--a);
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 10px;
+    overflow: scroll!important;
+}
+
+.item {
+    width: 100%;
+    min-height: 60px; 
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background: white;
+    border: 2px solid var(--f);
+    box-shadow: 2px 3px 6px rgba(0,0,0,0.145);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    flex:7;
+    background: inherit;
+    min-height: 50px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.content p {
+    font-size: 14px;
+    color: var(--a);
+    font-weight: 600;
+    text-align: start;
+}
+
+.action {
+    flex: 2;
+    background: inherit;
+    min-height: 50px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.action .button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.145);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    background: linear-gradient(to right, var(--e), var(--f));
+}
+
+.button:hover,
+.button:active {
+    color: var(--e);
+    border: 2px solid var(--e);
+    background: white;
+}
+
+.button:focus {
+    outline: none;
+}
